@@ -3,6 +3,13 @@ pipeline {
 
     stages {
 
+        stage('Test Docker') {
+            steps {
+                bat 'docker --version'
+                bat 'docker ps'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t myapp:latest .'
