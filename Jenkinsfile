@@ -37,7 +37,7 @@ pipeline {
                     docker rm myapp
                     if %ERRORLEVEL% NEQ 0 echo Container does not exist
 
-                    docker run -d --name myapp -p 3000:3000 myapp:latest
+                    docker run -d --name myapp -p 8000:3000 myapp:latest
                 '''
             }
         }
